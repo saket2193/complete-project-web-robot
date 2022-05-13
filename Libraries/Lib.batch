@@ -1,0 +1,3 @@
+pip install json
+pip install robotframework
+pp install robotframework-SeleniumLibrary

@@ -1,0 +1,15 @@
+*** Settings ***
+Library  SeleniumLibrary
+Library  Collections
+
+*** Variables ***
+
+
+*** Test Cases ***
+TC008_defining_list_in_testCases
+    @{list1}  Create List  saket  12  67.9  sharma
+    ${list_length}  get length  ${list1}
+    Log To Console    ${list_length}
+    ${listdata} =   get from list   ${list1}  1
+    Log To Console     ${listdata}
+*** Keywords ***

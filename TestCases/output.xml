@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.4 on win32)" generated="20220511 12:53:39.857" rpa="false" schemaversion="3">
+<suite id="s1" name="TC00 39" source="C:\Users\Admin\PycharmProjects\Robot_framework\TestCases\TC00_39.robot">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>https://www.demoblaze.com/</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220511 12:53:40.166" level="INFO">Opening browser 'Chrome' to base url 'https://www.demoblaze.com/'.</msg>
+<status status="PASS" starttime="20220511 12:53:40.165" endtime="20220511 12:53:43.071"/>
+</kw>
+<test id="s1-t1" name="TC0039_fetch data" line="17">
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220511 12:53:43.073" endtime="20220511 12:53:43.240"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Cart</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220511 12:53:43.288" level="INFO">Current page contains text 'Cart'.</msg>
+<status status="PASS" starttime="20220511 12:53:43.241" endtime="20220511 12:53:43.288"/>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<arg>saket</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<msg timestamp="20220511 12:53:43.324" level="INFO">Current page does not contain text 'saket'.</msg>
+<status status="PASS" starttime="20220511 12:53:43.288" endtime="20220511 12:53:43.324"/>
+</kw>
+<kw name="login">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="login2"]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20220511 12:53:43.342" level="INFO">Current page contains element 'xpath://*[@id="login2"]'.</msg>
+<status status="PASS" starttime="20220511 12:53:43.324" endtime="20220511 12:53:43.342"/>
+</kw>
+<status status="PASS" starttime="20220511 12:53:43.324" endtime="20220511 12:53:43.342"/>
+</kw>
+<kw name="Get Title" library="SeleniumLibrary">
+<var>${page_title}</var>
+<doc>Returns the title of the current page.</doc>
+<msg timestamp="20220511 12:53:43.350" level="INFO">${page_title} = STORE</msg>
+<status status="PASS" starttime="20220511 12:53:43.343" endtime="20220511 12:53:43.350"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${page_title}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220511 12:53:43.350" endtime="20220511 12:53:43.351"/>
+</kw>
+<kw name="Get Location" library="SeleniumLibrary">
+<var>${page_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<msg timestamp="20220511 12:53:43.357" level="INFO">${page_url} = https://www.demoblaze.com/</msg>
+<status status="PASS" starttime="20220511 12:53:43.351" endtime="20220511 12:53:43.357"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${page_url}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220511 12:53:43.357" endtime="20220511 12:53:43.358"/>
+</kw>
+<kw name="Get Selenium Speed" library="SeleniumLibrary">
+<var>${selenium_speed}</var>
+<doc>Gets the delay that is waited after each Selenium command.</doc>
+<msg timestamp="20220511 12:53:43.359" level="INFO">${selenium_speed} = 0 seconds</msg>
+<status status="PASS" starttime="20220511 12:53:43.358" endtime="20220511 12:53:43.359"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${selenium_speed}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220511 12:53:43.360" endtime="20220511 12:53:43.361"/>
+</kw>
+<kw name="Get Value" library="SeleniumLibrary">
+<var>${fetch_value_of_element}</var>
+<arg>xpath://*[@id="example-video_component_432-Uniform"]</arg>
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<msg timestamp="20220511 12:53:43.417" level="INFO">${fetch_value_of_element} = uniform</msg>
+<status status="PASS" starttime="20220511 12:53:43.362" endtime="20220511 12:53:43.417"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${fetch_value_of_element}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220511 12:53:43.418" endtime="20220511 12:53:43.419"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${fetch_text_of_element}</var>
+<arg>xpath://*[@id="itemc"]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20220511 12:53:43.498" level="INFO">${fetch_text_of_element} = Phones</msg>
+<status status="PASS" starttime="20220511 12:53:43.419" endtime="20220511 12:53:43.498"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${fetch_text_of_element}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220511 12:53:43.498" endtime="20220511 12:53:43.499"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://the-internet.herokuapp.com/dropdown</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20220511 12:53:43.500" level="INFO">Opening url 'https://the-internet.herokuapp.com/dropdown'</msg>
+<status status="PASS" starttime="20220511 12:53:43.499" endtime="20220511 12:53:47.173"/>
+</kw>
+<kw name="Get Selected List Value" library="SeleniumLibrary">
+<var>${Fetch selected value in dropdown}</var>
+<arg>xpath://*[@id="dropdown"]</arg>
+<doc>Returns the value of selected option from selection list ``locator``.</doc>
+<msg timestamp="20220511 12:53:47.236" level="INFO">${Fetch selected value in dropdown} = </msg>
+<status status="PASS" starttime="20220511 12:53:47.174" endtime="20220511 12:53:47.236"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Fetch selected value in dropdown}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220511 12:53:47.236" endtime="20220511 12:53:47.236"/>
+</kw>
+<kw name="Get Selected List Label" library="SeleniumLibrary">
+<var>${Fetch selected label in list/dropdown}</var>
+<arg>xpath://*[@id="dropdown"]</arg>
+<doc>Returns the label of selected option from selection list ``locator``.</doc>
+<msg timestamp="20220511 12:53:47.282" level="INFO">${Fetch selected label in list/dropdown} = Please select an option</msg>
+<status status="PASS" starttime="20220511 12:53:47.237" endtime="20220511 12:53:47.282"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Fetch selected label in list/dropdown}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220511 12:53:47.282" endtime="20220511 12:53:47.283"/>
+</kw>
+<kw name="Get List Items" library="SeleniumLibrary">
+<var>${Fetch list/dropdown items}</var>
+<arg>xpath://*[@id="dropdown"]</arg>
+<doc>Returns all labels or values of selection list ``locator``.</doc>
+<msg timestamp="20220511 12:53:47.347" level="INFO">${Fetch list/dropdown items} = ['Please select an option', 'Option 1', 'Option 2']</msg>
+<status status="PASS" starttime="20220511 12:53:47.283" endtime="20220511 12:53:47.347"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Fetch list/dropdown items}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220511 12:53:47.348" endtime="20220511 12:53:47.348"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${Fetch element attribute}</var>
+<arg>xpath://*[@id="dropdown"]</arg>
+<arg>id</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<msg timestamp="20220511 12:53:47.373" level="INFO">${Fetch element attribute} = dropdown</msg>
+<status status="PASS" starttime="20220511 12:53:47.349" endtime="20220511 12:53:47.373"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Fetch element attribute}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220511 12:53:47.374" endtime="20220511 12:53:47.374"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${Fetch element count}</var>
+<arg>xpath://*[@id="dropdown"]</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20220511 12:53:47.384" level="INFO">${Fetch element count} = 1</msg>
+<status status="PASS" starttime="20220511 12:53:47.374" endtime="20220511 12:53:47.384"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Fetch element count}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220511 12:53:47.384" endtime="20220511 12:53:47.384"/>
+</kw>
+<kw name="Get Source" library="SeleniumLibrary">
+<var>${Fetch source}</var>
+<doc>Returns the entire HTML source of the current page or frame.</doc>
+<msg timestamp="20220511 12:53:47.390" level="INFO">${Fetch source} = &lt;html class="no-js" lang="en"&gt;&lt;!--&lt;![endif]--&gt;&lt;head&gt;
+    &lt;script src="/js/vendor/298279967.js"&gt;&lt;/script&gt;
+    &lt;meta charset="utf-8"&gt;
+    &lt;meta name="viewport" content="width=device-width"&gt;
+    &lt;title&gt;T...</msg>
+<status status="PASS" starttime="20220511 12:53:47.385" endtime="20220511 12:53:47.390"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Fetch source}s</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220511 12:53:47.391" endtime="20220511 12:53:47.398"/>
+</kw>
+<doc>This test case is to check demoblaze website and perform few validations</doc>
+<status status="PASS" starttime="20220511 12:53:43.071" endtime="20220511 12:53:47.399"/>
+</test>
+<kw name="close" type="TEARDOWN">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220511 12:53:47.402" endtime="20220511 12:53:49.703"/>
+</kw>
+<status status="PASS" starttime="20220511 12:53:47.402" endtime="20220511 12:53:49.703"/>
+</kw>
+<doc>This file is having test for different fuctionality check</doc>
+<status status="PASS" starttime="20220511 12:53:39.860" endtime="20220511 12:53:49.703"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="TC00 39">TC00 39</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
